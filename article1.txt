@@ -144,4 +144,4 @@ Next.js – це маленький фреймворк, побудований на основі React, Webpack і Babel. 
 У будь-якому випадку, буде цікаво.
 
 Після того, як цей матеріал побачив світ, читачі підказали кілька важливих технологій, які дозволили його розширити. Можливо, і ви щось підкажете?
-http://it-ua.info/news/2017/01/09/javascript-trendi-na-yak-varto-zvernuti-uvagu-v-2017-mu.html
+[Джерело](http://it-ua.info/news/2017/01/09/javascript-trendi-na-yak-varto-zvernuti-uvagu-v-2017-mu.html)
