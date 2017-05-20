@@ -3,7 +3,7 @@
 Я вирішив написати цей матеріал після того, як побачив твіт Дена Абрамова, за який хочу сказати йому величезне спасибі.
 Ден поставив своїм підписникам питання про найцікавіші події у світі JavaScript, які варті уваги широкої громадськості.
 
-What is the most interesting thing happening in the JavaScript world that deserves more exposure?  Dan Abramov (@dan_abramov) December 29, 2016
+> What is the most interesting thing happening in the JavaScript world that deserves more exposure?  Dan Abramov (@dan_abramov) December 29, 2016
 
 Любителі JS на питання відгукнулися, під твітом зібралася ціла гора відповідей. Кожен говорив про те, на що, на його думку,
 варто звернути увагу в 2017-му році. В результаті вийшла вельми цікава підбірка, з якої я вибрав найкраще і додав пояснення.
