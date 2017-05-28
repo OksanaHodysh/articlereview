@@ -1,0 +1,19 @@
+show dbs
+use university
+show collections
+
+// 1. find all students with the score in range from 87 to 93 (regardless of type of assignment)
+db.students.find({scores: {$elemMatch: {score: {$gt: 87, $lt: 93}}}}).pretty()
+// check the number of students who meet specified criterion
+db.students.find({scores: {$elemMatch: {score: {$gt: 87, $lt: 93}}}}).length()	//returns 52
+
+// 2. select the students who got more than 90% for their exams
+db.students.aggregate([{$unwind: "$scores"}, {$match: {$and : [{'scores.type': "exam"}, {'scores.score': {$gt: 90}}]}}])
+// It works just fine, but I've found that the best practice is as following:
+// For small number of documents, unwind and match is fine.
+// But for large number of documents, it's better to do - match ($elemMatch), unwind, and match again.
+db.students.aggregate([{$match: {scores: {$elemMatch: {type: "exam", score: {$gt: 90}}}}}, {$unwind: "$scores"}, {$match: {$and : [{'scores.type': "exam"}, {'scores.score': {$gt: 90}}]}}])
+
+// 3. add a new field ("accepted": true) to the documents in which name property corresponds to "Dusti Lemmond"
+db.students.update({name: "Dusti Lemmond"}, {$set: {"accepted": true}}, {multi: true})
+//WriteResult({ "nMatched" : 2, "nUpserted" : 0, "nModified" : 2 })
